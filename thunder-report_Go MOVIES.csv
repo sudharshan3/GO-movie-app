@@ -1,0 +1,13 @@
+Client, Thunder Client
+CollectionName, Go MOVIES
+FolderName, 
+EnvironmentName, 
+DateExported, 2022-07-10T15:29:49.182Z
+
+
+Method, Name, Url, Status, Time, Passed, Total, Result
+GET, getallmovies, , 0, , 0, 0, N/A
+POST, createmovie, , 0, , 0, 0, N/A
+POST, markwatched, , 0, , 0, 0, N/A
+DELETE, deleteonemovie, , 0, , 0, 0, N/A
+DELETE, deleteallmovies, , 0, , 0, 0, N/A
