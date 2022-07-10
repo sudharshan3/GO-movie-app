@@ -31,6 +31,8 @@ func init() {
 	collection = client.Database(dbname).Collection(collname)
 
 }
+
+//functions
 func InsertOneMovie(movie model.Movies) {
 	inserted, err := collection.InsertOne(context.Background(), movie)
 	if err != nil {
