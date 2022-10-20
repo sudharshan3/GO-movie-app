@@ -22,6 +22,7 @@ const collname = "movies"
 var collection *mongo.Collection
 
 func init() {
+
 	ConnectionOption := options.Client().ApplyURI(connectionString)
 	client, err := mongo.Connect(context.TODO(), ConnectionOption)
 	if err != nil {

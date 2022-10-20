@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movieapp
+spec:
+  selector:
+    matchLabels:
+      app: movieapp
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: movieapp
+    spec:
+      containers:
+      - name: movieapp
+        image: movieapp:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 4000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: movieapp-service
+spec:
+  selector:
+    app: movieapp
+  ports:
+  - protocol: "TCP"
+    port: 4000
+    targetPort: 4000
+  type: LoadBalancer
